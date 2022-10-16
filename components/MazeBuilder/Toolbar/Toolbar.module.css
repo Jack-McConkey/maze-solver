@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.secondary-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-inline: 1px solid white;
+    padding-inline: 1rem;
+}

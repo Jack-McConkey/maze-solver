@@ -1,0 +1,38 @@
+.btn {
+    background: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: rgb(105, 12, 192);
+
+    color: white;
+}
+
+.accent {
+    background-color: #256d85;
+    color: white;
+}
+
+.search {
+    background-color: aliceblue;
+}
+
+.generate {
+    background-color: #256d85;
+    color: white;
+}
+
+.clear {
+    background-color: rgb(65, 65, 65);
+    color: white;
+}
+
+@media (hover: hover) {
+    .btn:hover {
+        transform: scale(1.05);
+    }
+}

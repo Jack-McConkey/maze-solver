@@ -15,8 +15,7 @@ export default function MazeNode({id, nodeType, handleClick, delay, lastNode}: M
                 if (!lastNode) return;
                 lastNode();
             }}
-            style={{animationDelay: `${delay}ms`}}
-            draggable={"false"}
+            style={delay > 0 ? {animationDelay: `${delay}ms`} : {}}
             onMouseDown={e => {
                 handleClick(id);
             }}

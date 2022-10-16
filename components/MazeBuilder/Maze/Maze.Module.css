@@ -15,25 +15,6 @@
     align-items: center;
 }
 
-.maze-btns-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    /* background-color: #dff6ff; */
-    border-radius: 8px;
-    padding: 1.5rem;
-    width: fit-content;
-}
-
-.maze-btn {
-    background: none;
-    border: none;
-    background-color: #256d85;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    color: white;
-}
-
 .maze-row {
     display: flex;
     gap: 0.2rem;

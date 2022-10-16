@@ -1,11 +1,11 @@
 import {Reducer} from "react";
 import generateMaze from "./generateMaze";
-import {MazeInterface} from "./Maze";
+import {MazeInterface} from "../MazeBuilder";
 
-interface MazeActions {
+export interface MazeActions {
     type: string;
     position?: [number, number];
-    action: string;
+    size?: {cols: number; rows: number};
     path?: number[][];
 }
 
@@ -84,7 +84,7 @@ export const mazeReducer: Reducer<MazeInterface, MazeActions> = (state, actions)
         }
 
         case "generateMaze": {
-            const maze = generateMaze(25, 25, {x: 0, y: 0});
+            const maze = generateMaze(23, 23, {x: 0, y: 0});
             newMaze.layout = maze;
             newMaze.start.x = 0;
             newMaze.start.y = 0;
