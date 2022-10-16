@@ -1,4 +1,5 @@
 .node {
+    touch-action: none;
     height: 25px;
     width: 25px;
     border-radius: 4px;
@@ -45,11 +46,22 @@
 
 @keyframes wall-in {
     0% {
-        transform: scale(1);
         background-color: violet;
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes wall-in {
+    0% {
+        background-color: violet;
+    }
+    50% {
+        transform: scale(1.1);
     }
     100% {
         transform: scale(1);
@@ -58,7 +70,19 @@
 
 @keyframes search-in {
     0% {
+        background-color: violet;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
         transform: scale(1);
+        background-color: coral;
+    }
+}
+
+@-webkit-keyframes search-in {
+    0% {
         background-color: violet;
     }
     50% {
@@ -86,5 +110,35 @@
         transform: scale(0.95);
         border-radius: 50%;
         background: linear-gradient(90deg, #47b5ff, violet);
+    }
+}
+
+@-webkit-keyframes shortest-search-in {
+    0% {
+        background: coral;
+    }
+
+    20% {
+        transform: scale(0.7);
+        border-radius: 50%;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.95);
+        border-radius: 50%;
+        background: linear-gradient(90deg, #47b5ff, violet);
+    }
+}
+
+@media (max-width: 800px) {
+    .node {
+        height: 20px;
+        width: 20px;
+    }
+
+    .wall {
+        animation: none;
     }
 }

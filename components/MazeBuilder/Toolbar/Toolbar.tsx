@@ -36,9 +36,9 @@ export default function Toolbar({
                 />
             </div>
             <div className={styles["secondary-container"]}>
-                <Button btnText="Generate Maze" handleClick={generateMaze} btnStyle={"generate"} />
-                <Button btnText="Search Maze" handleClick={searchMaze} btnStyle={"search"} />
-                <Button btnText="Clear Maze" handleClick={clearMaze} btnStyle={"clear"} />
+                <Button btnText="Generate" handleClick={generateMaze} btnStyle={"generate"} />
+                <Button btnText="Search" handleClick={searchMaze} btnStyle={"search"} />
+                <Button btnText="Clear" handleClick={clearMaze} btnStyle={"clear"} />
             </div>
         </div>
     );
