@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Maze Solver
 
-## Getting Started
+I built this app as a portfolio project, I wanted to practice some BFS and DFS so that was my inspiration for making this. This app allows the user to manually create a maze by adding walls or generate a maze via the generate button. Once the user is happy with the maze they can activate the search, the search will go from the start point until it finds the end point or until it cannot go any further, this process uses BFS and is visualized using animations. Once the end point has been found another animation will start which shows the shortest path from start to end.
 
-First, run the development server:
+## Main Technologies / Packages
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+-   React
+-   Typescript
+-   Next JS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Hightlights
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This project was just a small one but it really improved my understanding of recursion and in general it was just fun to make.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Challenges
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The main challenge in this project was the maze generation, I went with DFS recursive backtracking as my approach for the maze generation and tried following the pseudo code steps from Wikipedia.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Unfortunately, I initially misunderstood the steps, I was looking at the adjacent cells and setting them to seen / removing the wall. After a little bit of frustration, I realized that I actually needed to be looking 2 cells over and "breaking" the wall down between the current and target cell if it was not visited. Once I corrected this small mistake the rest was straight forward and fun to implement.
